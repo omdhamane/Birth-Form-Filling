@@ -1,0 +1,7 @@
+Flask
+gunicorn
+PyMuPDF
+pdfplumber
+Pillow
+reportlab
+jinja2

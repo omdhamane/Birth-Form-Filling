@@ -78,9 +78,9 @@ def serve_preview(filename):
 def api_fields():
     return jsonify(load_field_map())
 
+register_fonts()
+
+os.makedirs("output", exist_ok=True)
 
 if __name__ == "__main__":
-    register_fonts()
-    os.makedirs("output", exist_ok=True)
-    os.makedirs("templates", exist_ok=True)
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
