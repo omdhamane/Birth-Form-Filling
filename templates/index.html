@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth Registration PDF Generator</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        p.subtitle { color: #666; margin-top: 0; }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .field-group {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        .field-group.full { grid-column: 1 / -1; }
+        label { font-size: 0.85rem; color: #333; margin-bottom: 4px; font-weight: 600; }
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+        textarea { min-height: 60px; resize: vertical; }
+        .actions {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        button.primary { background: #1976d2; color: #fff; }
+        button.secondary { background: #fff; color: #1976d2; border: 1px solid #1976d2; }
+        button:disabled { opacity: 0.6; cursor: not-allowed; }
+        #preview { margin-top: 20px; max-width: 100%; border: 1px solid #ccc; border-radius: 4px; }
+        #status { margin-top: 10px; color: #333; font-size: 0.9rem; }
+        .note { font-size: 0.8rem; color: #777; margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Government Birth Registration PDF Generator</h1>
+    <p class="subtitle">Fill the form and generate a visually matching PDF.</p>
+
+    <form id="form">
+        <div class="form-grid">
+            {% for field in fields %}
+            <div class="field-group {% if 'address' in field.fieldName or 'signature' in field.fieldName %}full{% endif %}">
+                <label for="{{ field.fieldName }}">{{ field.fieldName }}</label>
+                {% if 'address' in field.fieldName or 'signature' in field.fieldName %}
+                <textarea id="{{ field.fieldName }}" name="{{ field.fieldName }}" placeholder="{{ sample.get(field.fieldName, '') }}">{{ sample.get(field.fieldName, '') }}</textarea>
+                {% else %}
+                <input type="text" id="{{ field.fieldName }}" name="{{ field.fieldName }}" value="{{ sample.get(field.fieldName, '') }}">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="actions">
+            <button type="button" class="primary" onclick="generatePdf()">Generate PDF</button>
+            <button type="button" class="secondary" onclick="previewPdf()">Preview</button>
+        </div>
+        <div id="status"></div>
+    </form>
+
+    <img id="preview" src="" alt="Preview" style="display:none;">
+
+    <script>
+        function getFormData() {
+            const data = {};
+            document.querySelectorAll('#form input, #form textarea').forEach(el => {
+                data[el.name] = el.value;
+            });
+            return data;
+        }
+
+        async function generatePdf() {
+            const status = document.getElementById('status');
+            status.textContent = 'Generating PDF...';
+            const res = await fetch('/api/generate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(getFormData())
+            });
+            const json = await res.json();
+            if (json.filename) {
+                status.innerHTML = `<a href="/api/download/${json.filename}" download>Download PDF</a>`;
+            } else {
+                status.textContent = 'Error generating PDF.';
+            }
+        }
+
+        async function previewPdf() {
+            const status = document.getElementById('status');
+            const preview = document.getElementById('preview');
+            status.textContent = 'Rendering preview...';
+            const res = await fetch('/api/preview', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(getFormData())
+            });
+            const json = await res.json();
+            if (json.filename) {
+                preview.src = '/api/preview/' + json.filename;
+                preview.style.display = 'block';
+                status.textContent = 'Preview ready.';
+            } else {
+                status.textContent = 'Error rendering preview.';
+            }
+        }
+    </script>
+</body>
+</html>

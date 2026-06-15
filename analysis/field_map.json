@@ -1,0 +1,226 @@
+{
+  "file": "uploads/birth_registration_form_v3.pdf",
+  "page_count": 1,
+  "fields": [
+    {
+      "fieldName": "applicant_name",
+      "x": 358.0009825025,
+      "y": 34.14646192700002,
+      "width": 192.27459122796876,
+      "height": 17.14999972124997,
+      "confidence": 0.8,
+      "source": "top_label_line",
+      "label": "अर्जदाराचेपूर्जनाव:-",
+      "page": 0
+    },
+    {
+      "fieldName": "applicant_address",
+      "x": 303.1609838735,
+      "y": 53.221412927000074,
+      "width": 247.11458985696873,
+      "height": 17.14999972124997,
+      "confidence": 0.8,
+      "source": "top_label_line",
+      "label": "पत्ता:-",
+      "page": 0
+    },
+    {
+      "fieldName": "application_date",
+      "x": 308.6398016,
+      "y": 91.54636417699999,
+      "width": 88.43999916399997,
+      "height": 17.14999972124997,
+      "confidence": 0.85,
+      "source": "date_slash_positions",
+      "label": "दनांक:- / /२०१",
+      "page": 0
+    },
+    {
+      "fieldName": "affidavit_applicant_name",
+      "x": 273.45367963915,
+      "y": 197.56855642699998,
+      "width": 206.29489461085006,
+      "height": 15.14999972124997,
+      "confidence": 0.7,
+      "source": "inline_blank_words",
+      "label": "\"मी खाली सही करणार अर्जदाराचे नाव श्री/श्रीमती/कु वय वर्षे",
+      "page": 0
+    },
+    {
+      "fieldName": "affidavit_applicant_age",
+      "x": 497.10857396600005,
+      "y": 197.56855642699998,
+      "width": 53.64797550049997,
+      "height": 15.14999972124997,
+      "confidence": 0.65,
+      "source": "inline_blank_words",
+      "label": "\"मी खाली सही करणार अर्जदाराचे नाव श्री/श्रीमती/कु वय वर्षे",
+      "page": 0
+    },
+    {
+      "fieldName": "affidavit_relationship",
+      "x": 97.8881834657875,
+      "y": 215.00849767700004,
+      "width": 122.1539369694625,
+      "height": 15.14999972124997,
+      "confidence": 0.7,
+      "source": "inline_blank_words",
+      "label": "बाळाशी नाते वनंती करतो क बाळाचे न्म दनांक / /२०१ रोी रुग्णालयाचे नाव",
+      "page": 0
+    },
+    {
+      "fieldName": "affidavit_birth_date",
+      "x": 391.3146163534375,
+      "y": 215.00849767700004,
+      "width": 67.5775044030625,
+      "height": 15.14999972124997,
+      "confidence": 0.65,
+      "source": "inline_blank_words",
+      "label": "बाळाशी नाते वनंती करतो क बाळाचे न्म दनांक / /२०१ रोी रुग्णालयाचे नाव",
+      "page": 0
+    },
+    {
+      "fieldName": "affidavit_hospital_name",
+      "x": 42.5,
+      "y": 232.4484389270001,
+      "width": 301.70141742399994,
+      "height": 15.14999972124997,
+      "confidence": 0.65,
+      "source": "inline_blank_words",
+      "label": "बाळाशी नाते वनंती करतो क बाळाचे न्म दनांक / /२०१ रोी रुग्णालयाचे नाव",
+      "page": 0
+    },
+    {
+      "fieldName": "child_name_marathi",
+      "x": 327.11,
+      "y": 289.748291015625,
+      "width": 221.26999999999998,
+      "height": 18.18994140625,
+      "confidence": 0.9,
+      "source": "table_row_marathi",
+      "label": "बाळाचेनाव",
+      "page": 0
+    },
+    {
+      "fieldName": "child_name_english",
+      "x": 327.11,
+      "y": 311.938232421875,
+      "width": 221.26999999999998,
+      "height": 17.324951171875,
+      "confidence": 0.88,
+      "source": "table_row_english",
+      "label": "बाळाचेनाव",
+      "page": 0
+    },
+    {
+      "fieldName": "birth_date_value",
+      "x": 327.11,
+      "y": 333.26318359375,
+      "width": 221.26999999999998,
+      "height": 18.18994140625,
+      "confidence": 0.9,
+      "source": "table_row_single",
+      "label": "बाळाचेन्मदनांक / /२०१",
+      "page": 0
+    },
+    {
+      "fieldName": "father_name_marathi",
+      "x": 327.11,
+      "y": 355.453125,
+      "width": 221.26999999999998,
+      "height": 18.18994140625,
+      "confidence": 0.9,
+      "source": "table_row_marathi",
+      "label": "वडिलांचेपूर्जनाव",
+      "page": 0
+    },
+    {
+      "fieldName": "father_name_english",
+      "x": 327.11,
+      "y": 377.64306640625,
+      "width": 221.26999999999998,
+      "height": 17.324951171875,
+      "confidence": 0.88,
+      "source": "table_row_english",
+      "label": "वडिलांचेपूर्जनाव",
+      "page": 0
+    },
+    {
+      "fieldName": "father_aadhaar_marathi",
+      "x": 327.11,
+      "y": 398.968017578125,
+      "width": 221.26999999999998,
+      "height": 18.18994140625,
+      "confidence": 0.9,
+      "source": "table_row_single",
+      "label": "वडिलांचाआधारकाडिर्जक्रमांक",
+      "page": 0
+    },
+    {
+      "fieldName": "mother_name_marathi",
+      "x": 327.11,
+      "y": 421.157958984375,
+      "width": 221.26999999999998,
+      "height": 18.18994140625,
+      "confidence": 0.9,
+      "source": "table_row_marathi",
+      "label": "आईचेपूर्जनाव",
+      "page": 0
+    },
+    {
+      "fieldName": "mother_name_english",
+      "x": 327.11,
+      "y": 443.347900390625,
+      "width": 221.26999999999998,
+      "height": 17.324951171875,
+      "confidence": 0.88,
+      "source": "table_row_english",
+      "label": "आईचेपूर्जनाव",
+      "page": 0
+    },
+    {
+      "fieldName": "mother_aadhaar_marathi",
+      "x": 327.11,
+      "y": 464.6728515625,
+      "width": 221.26999999999998,
+      "height": 18.18994140625,
+      "confidence": 0.9,
+      "source": "table_row_single",
+      "label": "आईचाआधारकाडिर्जक्रमांक",
+      "page": 0
+    },
+    {
+      "fieldName": "address_at_birth_marathi",
+      "x": 327.11,
+      "y": 486.86279296875,
+      "width": 221.26999999999998,
+      "height": 24.5,
+      "confidence": 0.9,
+      "source": "table_row_single",
+      "label": "न्माच्यावेळीआईवडिलांचापत्ता",
+      "page": 0
+    },
+    {
+      "fieldName": "permanent_address_marathi",
+      "x": 327.11,
+      "y": 515.36279296875,
+      "width": 221.26999999999998,
+      "height": 24.5,
+      "confidence": 0.9,
+      "source": "table_row_single",
+      "label": "आईवडिलांचाकायमचापत्ता",
+      "page": 0
+    },
+    {
+      "fieldName": "applicant_signature",
+      "x": 459.2869115,
+      "y": 657.98759939825,
+      "width": 75.98866223046878,
+      "height": 30,
+      "confidence": 0.65,
+      "source": "signature_area",
+      "label": "अर्जदाराचीसहिी",
+      "page": 0
+    }
+  ]
+}
