@@ -6,7 +6,7 @@ import os
 from flask import Flask, jsonify, render_template, request, send_file
 
 from config.field_config import FIELD_SECTIONS, FIELD_LABELS
-from html_pdf_generator import generate_pdf
+from pymupdf_generator import generate_pdf
 from translator import build_english_fields
 
 app = Flask(__name__)
