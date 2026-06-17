@@ -26,34 +26,38 @@ def load_field_map():
 
 def build_sample_data():
     return {
-        "applicant_name": "",
-        "applicant_address": "",
-        "application_date": "",
+        "applicant_name": "OM DHAMANE",
+        "applicant_address": "Malegaon, Nashik, Maharashtra",
+        "application_date": "17/06/2026",
 
-        "affidavit_applicant_name": "",
-        "affidavit_applicant_age": "",
-        "affidavit_relationship": "",
-        "affidavit_birth_date": "",
-        "affidavit_hospital_name": "",
+        "affidavit_applicant_name": "OM DHAMANE",
+        "affidavit_applicant_age": "22",
+        "affidavit_relationship": "FATHER",
+        "affidavit_birth_date": "15/06/2026",
+        "affidavit_hospital_name": "MALEGAON GENERAL HOSPITAL",
 
-        "child_name_marathi": "",
-        "child_name_english": "",
+        "child_name_marathi": " ओम धामणे",
+        "child_name_english": " OM DHAMANE",
 
-        "father_name_marathi": "",
-        "father_name_english": "",
+        "father_name_marathi": "ओम  धामणे",
+        "father_name_english": "OM DHAMANE",
 
-        "mother_name_marathi": "",
-        "mother_name_english": "",
+        "father_aadhaar_marathi": "1234 5678 9012",
 
-        "birth_date_value": "",
+        "mother_name_marathi": "ओम धामणे",
+        "mother_name_english": "OM DHAMANE",
+
+        "mother_aadhaar_marathi": "9876 5432 1098",
+
+        "birth_date_value": "15/06/2026",
 
         "address_at_birth_marathi":
-            "",
+            "मालेगाव कॅम्प, नाशिक रोड, महाराष्ट्र",
 
         "permanent_address_marathi":
-            "",
+            "घर क्रमांक १२३, शिवाजी नगर, मालेगाव, नाशिक, महाराष्ट्र",
 
-        "applicant_signature": "",
+        "applicant_signature": "OM DHAMANE"
     }
 
 

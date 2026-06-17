@@ -34,14 +34,20 @@ def generate_pdf(data):
         if not value.strip():
             continue
 
-        x = coord["left"]
+        x = coord["left"] + 10
         y = coord["top"]
 
-        page.insert_text(
-            (x, y),
+        page.insert_textbox(
+             fitz.Rect(
+                x,
+                y,
+                x + 220,
+                y + 20
+            ),
             value,
-            fontsize=12,
-            fontname="dev"
+            fontsize=9,
+            fontname="dev",
+            align=0
         )
 
     output_name = (
