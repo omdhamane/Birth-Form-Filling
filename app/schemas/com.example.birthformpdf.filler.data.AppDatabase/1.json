@@ -1,0 +1,202 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "cc9f0792eed184ce3aa2bc0cf68f02c1",
+    "entities": [
+      {
+        "tableName": "birth_records",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `childName` TEXT NOT NULL, `gender` TEXT NOT NULL, `dateOfBirth` TEXT NOT NULL, `timeOfBirth` TEXT NOT NULL, `placeOfBirth` TEXT NOT NULL, `birthType` TEXT NOT NULL, `motherName` TEXT NOT NULL, `motherAadhaar` TEXT NOT NULL, `motherAge` TEXT NOT NULL, `motherEducation` TEXT NOT NULL, `motherOccupation` TEXT NOT NULL, `fatherName` TEXT NOT NULL, `fatherAadhaar` TEXT NOT NULL, `fatherAge` TEXT NOT NULL, `fatherEducation` TEXT NOT NULL, `fatherOccupation` TEXT NOT NULL, `houseNumber` TEXT NOT NULL, `street` TEXT NOT NULL, `villageCity` TEXT NOT NULL, `taluka` TEXT NOT NULL, `district` TEXT NOT NULL, `state` TEXT NOT NULL, `pinCode` TEXT NOT NULL, `informantName` TEXT NOT NULL, `relation` TEXT NOT NULL, `mobileNumber` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "childName",
+            "columnName": "childName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateOfBirth",
+            "columnName": "dateOfBirth",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeOfBirth",
+            "columnName": "timeOfBirth",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "placeOfBirth",
+            "columnName": "placeOfBirth",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "birthType",
+            "columnName": "birthType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "motherName",
+            "columnName": "motherName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "motherAadhaar",
+            "columnName": "motherAadhaar",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "motherAge",
+            "columnName": "motherAge",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "motherEducation",
+            "columnName": "motherEducation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "motherOccupation",
+            "columnName": "motherOccupation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatherName",
+            "columnName": "fatherName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatherAadhaar",
+            "columnName": "fatherAadhaar",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatherAge",
+            "columnName": "fatherAge",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatherEducation",
+            "columnName": "fatherEducation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatherOccupation",
+            "columnName": "fatherOccupation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "houseNumber",
+            "columnName": "houseNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "street",
+            "columnName": "street",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "villageCity",
+            "columnName": "villageCity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "taluka",
+            "columnName": "taluka",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "district",
+            "columnName": "district",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "state",
+            "columnName": "state",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pinCode",
+            "columnName": "pinCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "informantName",
+            "columnName": "informantName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relation",
+            "columnName": "relation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mobileNumber",
+            "columnName": "mobileNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'cc9f0792eed184ce3aa2bc0cf68f02c1')"
+    ]
+  }
+}

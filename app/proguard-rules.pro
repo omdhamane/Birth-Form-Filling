@@ -1,0 +1,4 @@
+-keep class com.tom_roush.** { *; }
+-keep class org.bouncycastle.** { *; }
+-dontwarn com.gemalto.jp2.**
+-dontwarn javax.naming.**

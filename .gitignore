@@ -1,0 +1,9 @@
+.gradle/
+.kotlin/
+.android-sdk/
+build/
+app/build/
+local.properties
+tmp/
+*.iml
+.idea/
